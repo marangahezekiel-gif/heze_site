@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>heze.site · Trade smarter</title>
+  <meta name="description" content="heze.site — tools, signals and resources for smart traders." />
+  <style>
+    /* Reset + base */
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#1fb6ff;
+      --muted:#9aa8b9;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --max:1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#071022 0%, #071827 45%, #081220 100%);
+      color:#e6f1ff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:28px 16px;
+      display:flex;
+      justify-content:center;
+      font-size:16px;
+    }
+    .wrap{width:100%;max-width:var(--max)}
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:28px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:48px;height:48px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#7b61ff);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#041226;
+      box-shadow: 0 6px 18px rgba(31,182,255,0.12), inset 0 -6px 18px rgba(255,255,255,0.02);
+    }
+    .brand h1{font-size:18px;margin:0}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .cta{background:var(--accent);color:#041226;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    /* Hero */
+    .hero{
+      display:flex;
+      gap:28px;
+      align-items:center;
+      justify-content:space-between;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:28px;border-radius:var(--radius);backdrop-filter: blur(6px);
+    }
+    .left{flex:1;min-width:240px}
+    .eyebrow{display:inline-block;background:var(--glass);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:700;margin-bottom:12px}
+    h2{margin:0 0 12px 0;font-size:30px;line-height:1.05}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;display:inline-block}
+    .btn-primary{background:var(--accent);color:#031226}
+    .btn-outline{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+    .right{width:420px;max-width:42%;min-width:260px}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03);
+    }
+    /* features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .feature{background:var(--card);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    .feature h3{margin:0 0 8px;font-size:16px}
+    .muted{color:var(--muted);font-size:14px}
+    /* CTA strip */
+    .strip{margin-top:22px;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(31,182,255,0.06), rgba(123,97,255,0.03));display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .price{font-weight:800;font-size:20px}
+    /* testimonials */
+    .testimonials{display:flex;gap:12px;margin-top:18px}
+    .test{flex:1;background:var(--card);padding:12px;border-radius:10px}
+    .footer{margin-top:28px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    /* mobile */
+    @media (max-width:900px){
+      .hero{flex-direction:column}
+      .right{width:100%;max-width:100%}
+      .features{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      nav{display:none}
+      header{align-items:flex-start;flex-direction:column;gap:12px}
+      .features{grid-template-columns:1fr}
+      body{padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">HS</div>
+        <div>
+          <h1>heze.site</h1>
+          <div style="font-size:12px;color:var(--muted)">Trade tools & signals</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#learn">Learn</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#signup">Get started</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" role="banner">
+        <div class="left">
+          <span class="eyebrow">All your trading tools in one place</span>
+          <h2>Trade smarter — automated tools, live signals, and journal all in one hub.</h2>
+          <p class="lead">Build strategies, capture screenshots, track performance and follow verified signals — whether you're on mobile or desktop.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#signup">Start free trial</a>
+            <a class="btn btn-outline" href="#learn">See features</a>
+          </div>
+
+          <div class="features" id="features" style="margin-top:18px">
+            <div class="feature">
+              <h3>Signal hub</h3>
+              <div class="muted">Verified trading signals you can follow or copy automatically.</div>
+            </div>
+            <div class="feature">
+              <h3>Screenshot journal</h3>
+              <div class="muted">Capture trade snapshots & keep a searchable record of every trade.</div>
+            </div>
+            <div class="feature">
+              <h3>Multi-account</h3>
+              <div class="muted">Connect multiple accounts for consolidated analysis & automation.</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="right">
+          <div class="card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+              <div>
+                <div style="font-size:12px;color:var(--muted)">Live trade</div>
+                <div style="font-weight:800;font-size:20px">EUR/USD • BUY</div>
+              </div>
+              <div style="text-align:right;color:var(--muted)">+0.46% <br><small style="color:var(--muted)">0.23s ago</small></div>
+            </div>
+            <div style="height:140px;border-radius:10px;background:linear-gradient(90deg,#061226, #0b1830);display:flex;align-items:center;justify-content:center;color:var(--muted)">
+              Chart preview
+            </div>
+            <div style="display:flex;gap:8px;margin-top:12px">
+              <button class="btn btn-primary" style="flex:1">Connect account</button>
+              <button class="btn btn-outline" style="flex:1">Demo mode</button>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:10px">
+            <div class="card" style="flex:1;padding:12px">
+              <div style="font-size:12px;color:var(--muted)">Members</div>
+              <div style="font-weight:800">1.8k+</div>
+            </div>
+            <div class="card" style="flex:1;padding:12px">
+              <div style="font-size:12px;color:var(--muted)">Avg win</div>
+              <div style="font-weight:800">+62%</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="strip" id="pricing" aria-labelledby="pricingTitle">
+        <div>
+          <div id="pricingTitle" style="font-weight:800">Pro plan · 14-day free trial</div>
+          <div class="muted" style="margin-top:6px">Signals, multi-account, priority support</div>
+        </div>
+        <div style="text-align:right">
+          <div class="price">$14 / month</div>
+          <a class="btn btn-primary" href="#signup" style="margin-top:8px;display:inline-block">Start trial</a>
+        </div>
+      </section>
+
+      <section style="margin-top:22px">
+        <h3 style="margin:0 0 12px">What traders say</h3>
+        <div class="testimonials" aria-label="Testimonials">
+          <div class="test">
+            <div style="font-weight:700">"Signals are accurate and easy to follow."</div>
+            <div class="muted" style="margin-top:8px">— A. Njoroge, Nairobi</div>
+          </div>
+          <div class="test">
+            <div style="font-weight:700">"Saved me hours of manual journaling."</div>
+            <div class="muted" style="margin-top:8px">— L. Mwangi, Mombasa</div>
+          </div>
+          <div class="test">
+            <div style="font-weight:700">"Smooth multi-account sync."</div>
+            <div class="muted" style="margin-top:8px">— S. Patel, Kisumu</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="learn" style="margin-top:22px">
+        <h3 style="margin:0 0 12px">Get started</h3>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <div class="card" style="flex:1;min-width:240px">
+            <strong>Step 1</strong>
+            <div class="muted" style="margin-top:8px">Connect your broker or use demo mode.</div>
+          </div>
+          <div class="card" style="flex:1;min-width:240px">
+            <strong>Step 2</strong>
+            <div class="muted" style="margin-top:8px">Enable signals and auto-follow if desired.</div>
+          </div>
+          <div class="card" style="flex:1;min-width:240px">
+            <strong>Step 3</strong>
+            <div class="muted" style="margin-top:8px">Review trades in your journal and refine strategy.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:22px">
+        <div class="card">
+          <h3 style="margin-top:0">Contact & Support</h3>
+          <div class="muted">Questions? Email <a href="mailto:support@heze.site" style="color:var(--accent);text-decoration:none">support@heze.site</a> or join our Telegram/WhatsApp.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" style="margin-top:18px">
+      <div>© <strong>heze.site</strong> · All rights reserved.</div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a href="#" style="color:var(--muted);text-decoration:none">Privacy</a>
+        <a href="#" style="color:var(--muted);text-decoration:none">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // minimal interactivity (no external libs)
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const t = a.getAttribute('href');
+        if(t.length>1){
+          e.preventDefault();
+          const el = document.querySelector(t);
+          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
